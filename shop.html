@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Élegante Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>Élegante</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                <li><a href="add-product.html" class="nav-link">Add Product</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="shop.html?category=women">Women's Wear</a>
+                        <a href="shop.html?category=men">Men's Wear</a>
+                        <a href="shop.html?category=kids">Kids</a>
+                        <a href="shop.html?category=accessories">Accessories</a>
+                    </div>
+                </li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="shop-page">
+        <div class="container">
+            <div class="page-header">
+                <h1 id="category-title">All Products</h1>
+                <p>Discover our curated collection of fashion essentials</p>
+            </div>
+
+            <div class="shop-content">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar">
+                    <div class="filter-section">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label><input type="radio" name="category" value="all" checked> All Products</label>
+                            <label><input type="radio" name="category" value="women"> Women's Wear</label>
+                            <label><input type="radio" name="category" value="men"> Men's Wear</label>
+                            <label><input type="radio" name="category" value="kids"> Kids</label>
+                            <label><input type="radio" name="category" value="accessories"> Accessories</label>
+                            <label><input type="radio" name="category" value="Traditional"> Traditional</label>
+                            <label><input type="radio" name="category" value="western"> Western</label>
+                            <label><input type="radio" name="category" value="formal"> Formal</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Price Range</h3>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="0-500"> Under ₹500</label>
+                            <label><input type="checkbox" value="500-1000"> ₹500 - ₹1000</label>
+                            <label><input type="checkbox" value="1000-2000"> ₹1000 - ₹2000</label>
+                            <label><input type="checkbox" value="2000+"> ₹2000+</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Size</h3>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="XS"> XS</label>
+                            <label><input type="checkbox" value="S"> S</label>
+                            <label><input type="checkbox" value="M"> M</label>
+                            <label><input type="checkbox" value="L"> L</label>
+                            <label><input type="checkbox" value="XL"> XL</label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Section -->
+                <div class="products-section">
+                    <div class="products-header">
+                        <div class="sort-options">
+                            <label>Sort by:</label>
+                            <select id="sort-select">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="products-grid">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Élegante</h3>
+                    <p>Your destination for luxury fashion and timeless elegance.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="add-product.html">Add Product</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="shop.html?category=women">Women's Wear</a></li>
+                        <li><a href="shop.html?category=men">Men's Wear</a></li>
+                        <li><a href="shop.html?category=kids">Kids</a></li>
+                        <li><a href="shop.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Élegante Boutique. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let products = JSON.parse(localStorage.getItem("productsData")) || [];
+            const productsGrid = document.getElementById("products-grid");
+
+            function renderProducts(items) {
+                if (items.length === 0) {
+                    productsGrid.innerHTML = `<p>No products found.</p>`;
+                    return;
+                }
+                productsGrid.innerHTML = items.map(product => `
+                    <div class="product-card">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>Category: ${product.category}</p>
+                        <p>₹${product.price}</p> <!-- Changed from $ to ₹ -->
+                    </div>
+                `).join("");
+            }
+
+            renderProducts(products);
+        });
+    </script>
+</body>
+</html>
+
